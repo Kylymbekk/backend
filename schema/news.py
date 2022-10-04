@@ -1,6 +1,10 @@
+from fastapi import UploadFile
 from pydantic import BaseModel
-from typing import Union
 
 
 class NewsPost(BaseModel):
-    token: Union[str, None]
+    title: str
+    date: str
+    description: str
+    image: UploadFile
+
